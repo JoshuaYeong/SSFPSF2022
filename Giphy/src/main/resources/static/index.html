@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" 
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" 
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h2 {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <h2>Giphy Search</h2>
+                <table style="margin-left:auto;margin-right:auto;">
+                        <form method="GET" action="/search">
+                            <div class="input-group">
+                                <tr><td><p></p></td></tr>
+                            <tr>
+                                <td style="text-align: right;padding-right: 10px;">
+                                    <label>Search: </label>
+                                </td>
+                                <td><input type="text" name="search" 
+                                    class="form-control" style="width:100%;"
+                                    required pattern="^[a-zA-Z0-9][a-zA-Z0-9\s]+"
+                                    placeholder="Enter a Search Phrase">
+                                </td>
+                            </tr>
+                            <tr><td><p></p></td></tr>
+                            <tr>
+                                <td style="text-align: right;padding-right: 10px;">
+                                    <label>Limit: </label> 
+                                </td>
+                                <td><select name="limit">
+                                    <option value="" selected> -- select an option -- </option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr><td><p></p></td></tr>
+                            <tr>
+                                <td style="text-align: right;padding-right: 10px;">
+                                    <label>Rating: </label> 
+                                </td>
+                                <td><select name="rating">
+                                    <option>-- select an option --</option>
+                                    <option value="g">G</option>
+                                    <option value="pg">PG</option>
+                                    <option value="pg-13">PG-13</option>
+                                    <option value="r">R</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr><td><p></p></td></tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: right;">
+                                    <button type="submit" style="height: 30px; width: 150px;">Submit</button>
+                                </td>
+                            </tr>
+                            </div>
+                        </form>
+                </table>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

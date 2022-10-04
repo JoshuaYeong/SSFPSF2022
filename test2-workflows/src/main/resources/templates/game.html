@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr data-th-each="game: ${games}">
+                <td><img data-th-src="${game.image}" height="100px" width="150px"></td>
+                <td data-th-text="'Game Id: ' + ${game.gameId}"><br> 
+                <td data-th-text="'Name: ' + ${game.name}"><br>
+                <td data-th-text="'Year: ' + ${game.year}"><br>
+                <td data-th-text="'Ranking: ' + ${game.ranking}"><br>
+                <td data-th-text="'Users_Rated: ' + ${game.usersRated}"><br>
+                <td data-th-text="'URL: ' + ${game.url}"><br>
+                </td>
+            </tr>
+            <tr>
+                <td data-th-each="game: ${games}">
+                    <td data-th-text="comment">
+                    </td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
